@@ -11,13 +11,13 @@ class Inference(object):
         Les modèles sont préchargés afin que cela ne prenne pas de temps lors de l'inférence
         """
         #CNN
-        self.cnn_model = load_model('models/arabic_sentiment_cnn.hdf5')
-        with  open("models/arabic_sentiment_cnn.pickle", "rb") as f:
+        self.cnn_model = load_model('/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_cnn.hdf5')
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_cnn.pickle", "rb") as f:
             self.cnn_pickle = pickle.load(f)
 
         #LSTM
-        self.lstm_model = load_model('models/arabic_sentiment_lstm.hdf5')
-        with  open("models/arabic_sentiment_lstm.pickle", "rb") as f:
+        self.lstm_model = load_model('/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_lstm.hdf5')
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_lstm.pickle", "rb") as f:
             self.tokenizer = pickle.load(f)
 
         #SVM
