@@ -6,3 +6,4 @@ numpy
 wordcloud
 arabic_reshaper
 python-bidi
+tweepy
