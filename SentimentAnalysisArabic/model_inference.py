@@ -38,11 +38,11 @@ class Inference(object):
         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_naivebayes_tokenizer.pickle", "rb") as f:
             self.naivebayes_tfidf = pickle.load(f)
 
-        #RandomForest
-        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_RandomForest.pickle", "rb") as f:
-            self.RandomForest_model = pickle.load(f)
-        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_RandomForest_tokenizer.pickle", "rb") as f:
-            self.RandomForest_tfidf = pickle.load(f)
+#         #RandomForest
+#         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_RandomForest.pickle", "rb") as f:
+#             self.RandomForest_model = pickle.load(f)
+#         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_RandomForest_tokenizer.pickle", "rb") as f:
+#             self.RandomForest_tfidf = pickle.load(f)
 
         #XGBoost
         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_XGBoost.pickle", "rb") as f:
@@ -85,11 +85,11 @@ class Inference(object):
             X = self.naivebayes_tfidf.transform(data)
             num_class = self.naivebayes_model.predict_proba(X)
             df['sentiment_score'] = [num[1] for num in num_class]
-        elif model == 'RandomForest':
-            data = df['tweet']
-            X = self.RandomForest_tfidf.transform(data)
-            num_class = self.RandomForest_model.predict_proba(X)
-            df['sentiment_score'] = [num[1] for num in num_class]
+#         elif model == 'RandomForest':
+#             data = df['tweet']
+#             X = self.RandomForest_tfidf.transform(data)
+#             num_class = self.RandomForest_model.predict_proba(X)
+#             df['sentiment_score'] = [num[1] for num in num_class]
         elif model == 'XGBoost':
             data = df['tweet']
             X = self.XGBoost_tfidf.transform(data)
