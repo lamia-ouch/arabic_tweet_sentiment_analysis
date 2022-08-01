@@ -10,7 +10,7 @@ Video of the presentation:
 https://drive.google.com/file/d/1utpwTH0NpTsQ1GFG5rF8LZpsTjB_Sw_5/view
 
 Link to app:
-https://zakaria-aabbou-arabic-twee-sentimentanalysisarabicsa-app-a533h9.streamlitapp.com/
+https://zakaria-aabbou-arabic-twee-sentimentanalysisarabicsa-app-dduf4o.streamlitapp.com/
 
 
 ## Modules 
