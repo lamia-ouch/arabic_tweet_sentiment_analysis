@@ -9,3 +9,4 @@ python-bidi
 tweepy
 plotly
 nltk
+scikit-learn
