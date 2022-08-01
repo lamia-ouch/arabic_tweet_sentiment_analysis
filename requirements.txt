@@ -1,4 +1,4 @@
-tensorflow>=2.1.4
+tensorflow>=2.1.0
 keras==2.2.5
 streamlit
 pandas
