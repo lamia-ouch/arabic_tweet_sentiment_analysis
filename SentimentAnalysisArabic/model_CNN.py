@@ -4,11 +4,11 @@ import re
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from keras.layers import Dense, Conv1D, MaxPooling1D ,Flatten
-from keras.layers.embeddings import Embedding
-from keras.models import Sequential
-from keras.preprocessing.sequence import pad_sequences
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.layers import Dense, Conv1D, MaxPooling1D ,Flatten
+from tensorflow.keras.layers.embeddings import Embedding
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
 from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
 from tensorflow.keras.utils import plot_model
