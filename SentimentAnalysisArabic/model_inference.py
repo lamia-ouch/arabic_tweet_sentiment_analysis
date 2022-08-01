@@ -20,11 +20,11 @@ class Inference(object):
         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_lstm.pickle", "rb") as f:
             self.tokenizer = pickle.load(f)
 
-        #SVM
-        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_svm.pickle", "rb") as f:
-            self.svm_model = pickle.load(f)
-        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_svm_tokenizer.pickle", "rb") as f:
-            self.svm_tfidf = pickle.load(f)
+#         #SVM
+#         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_svm.pickle", "rb") as f:
+#             self.svm_model = pickle.load(f)
+#         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_svm_tokenizer.pickle", "rb") as f:
+#             self.svm_tfidf = pickle.load(f)
 
         #DecisionTree
         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_DecisionTree.pickle", "rb") as f:
@@ -65,11 +65,11 @@ class Inference(object):
             data = pad_sequences(sequences, maxlen=100)
             num_class = self.lstm_model.predict(data)
             df['sentiment_score'] = num_class
-        elif model == 'SVM':
-            data = df['tweet']
-            X = self.svm_tfidf.transform(data)
-            num_class = self.svm_model.predict_proba(X)
-            df['sentiment_score'] = [num[1] for num in num_class]
+#         elif model == 'SVM':
+#             data = df['tweet']
+#             X = self.svm_tfidf.transform(data)
+#             num_class = self.svm_model.predict_proba(X)
+#             df['sentiment_score'] = [num[1] for num in num_class]
         elif model == 'CNN':
             sequences = self.cnn_pickle.texts_to_sequences(df['tweet'])
             data = pad_sequences(sequences, maxlen=100)
