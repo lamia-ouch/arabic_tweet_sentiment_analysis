@@ -1,10 +1,10 @@
 import base64
 
-import keras.backend.tensorflow_backend as tb
+# import keras.backend.tensorflow_backend as tb
 import pandas as pd
 import streamlit as st
 
-tb._SYMBOLIC_SCOPE.value = True
+# tb._SYMBOLIC_SCOPE.value = True
 
 from model_inference import Inference
 from tweetmanger import TweetManager
