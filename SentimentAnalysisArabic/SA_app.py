@@ -1,6 +1,6 @@
 import base64
 
-import tensorflow.keras.backend.tensorflow_backend as tb
+import keras.backend.tensorflow_backend as tb
 import pandas as pd
 import streamlit as st
 
