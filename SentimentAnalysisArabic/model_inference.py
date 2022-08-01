@@ -26,11 +26,11 @@ class Inference(object):
 #         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_svm_tokenizer.pickle", "rb") as f:
 #             self.svm_tfidf = pickle.load(f)
 
-        #DecisionTree
-        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_DecisionTree.pickle", "rb") as f:
-            self.DecisionTree_model = pickle.load(f)
-        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_DecisionTree_tokenizer.pickle", "rb") as f:
-            self.DecisionTree_tfidf = pickle.load(f)
+#         #DecisionTree
+#         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_DecisionTree.pickle", "rb") as f:
+#             self.DecisionTree_model = pickle.load(f)
+#         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_DecisionTree_tokenizer.pickle", "rb") as f:
+#             self.DecisionTree_tfidf = pickle.load(f)
 
         #naivebayes
         with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_naivebayes.pickle", "rb") as f:
@@ -75,11 +75,11 @@ class Inference(object):
             data = pad_sequences(sequences, maxlen=100)
             num_class = self.cnn_model.predict(data)
             df['sentiment_score'] = num_class
-        elif model == 'DecisionTree':
-            data = df['tweet']
-            X = self.DecisionTree_tfidf.transform(data)
-            num_class = self.DecisionTree_model.predict_proba(X)
-            df['sentiment_score'] = [num[1] for num in num_class]
+#         elif model == 'DecisionTree':
+#             data = df['tweet']
+#             X = self.DecisionTree_tfidf.transform(data)
+#             num_class = self.DecisionTree_model.predict_proba(X)
+#             df['sentiment_score'] = [num[1] for num in num_class]
         elif model == 'naivebayes':
             data = df['tweet']
             X = self.naivebayes_tfidf.transform(data)
