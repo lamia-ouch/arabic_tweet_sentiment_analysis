@@ -21,33 +21,33 @@ class Inference(object):
             self.tokenizer = pickle.load(f)
 
         #SVM
-        with  open("models/arabic_sentiment_svm.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_svm.pickle", "rb") as f:
             self.svm_model = pickle.load(f)
-        with  open("models/arabic_sentiment_svm_tokenizer.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_svm_tokenizer.pickle", "rb") as f:
             self.svm_tfidf = pickle.load(f)
 
         #DecisionTree
-        with  open("models/arabic_sentiment_DecisionTree.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_DecisionTree.pickle", "rb") as f:
             self.DecisionTree_model = pickle.load(f)
-        with  open("models/arabic_sentiment_DecisionTree_tokenizer.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_DecisionTree_tokenizer.pickle", "rb") as f:
             self.DecisionTree_tfidf = pickle.load(f)
 
         #naivebayes
-        with  open("models/arabic_sentiment_naivebayes.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_naivebayes.pickle", "rb") as f:
             self.naivebayes_model = pickle.load(f)
-        with  open("models/arabic_sentiment_naivebayes_tokenizer.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_naivebayes_tokenizer.pickle", "rb") as f:
             self.naivebayes_tfidf = pickle.load(f)
 
         #RandomForest
-        with  open("models/arabic_sentiment_RandomForest.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_RandomForest.pickle", "rb") as f:
             self.RandomForest_model = pickle.load(f)
-        with  open("models/arabic_sentiment_RandomForest_tokenizer.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_RandomForest_tokenizer.pickle", "rb") as f:
             self.RandomForest_tfidf = pickle.load(f)
 
         #XGBoost
-        with  open("models/arabic_sentiment_XGBoost.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_XGBoost.pickle", "rb") as f:
             self.XGBoost_model = pickle.load(f)
-        with  open("models/arabic_sentiment_XGBoost_tokenizer.pickle", "rb") as f:
+        with  open("/app/arabic_tweet_sentiment_analysis/SentimentAnalysisArabic/models/arabic_sentiment_XGBoost_tokenizer.pickle", "rb") as f:
             self.XGBoost_tfidf = pickle.load(f)
 
 
