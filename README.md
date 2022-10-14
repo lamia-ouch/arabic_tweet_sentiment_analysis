@@ -16,7 +16,7 @@ https://zakaria-aabbou-arabic-twee-sentimentanalysisarabicsa-app-dduf4o.streamli
 ## Modules 
 ### Data Used for training
 
-The data used is a public dataset of tagged arabic tweets. There is 60k instances of data.
+The data used is a public dataset of tagged arabic tweets. There are 60k instances of data.
 The data is in the `data` folder.
 ### LSTM model
 
